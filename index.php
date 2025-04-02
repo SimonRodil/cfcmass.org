@@ -50,6 +50,23 @@
         .topper {
             display: none !important;
         }
+        .hero-wrap {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .hero-video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+            object-fit: cover;
+        }
     </style>
       
     <!-- Google Tag Manager -->
@@ -114,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- END nav -->
     <div class="hero-wrap js-fullheight" style="background-image: url('vide/poster.png');" data-stellar-background-ratio="0.5" id="index-top">
       <video class="hero-video" autoplay muted loop playsinline>
-        <source src="http://cfcmass.org/vide/video-bg.mp4" type="video/mp4">
+        <source src="vide/video-bg.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
       <div id="video" style="max-height: 100%"></div>
