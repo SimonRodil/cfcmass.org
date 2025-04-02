@@ -112,7 +112,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	  </nav>
 		
     <!-- END nav -->
-    <div class="hero-wrap js-fullheight" style="2background-image: url('vide/poster.png');" data-stellar-background-ratio="0.5" id="index-top">
+    <div class="hero-wrap js-fullheight" style="background-image: url('vide/poster.png');" data-stellar-background-ratio="0.5" id="index-top">
+      <video class="hero-video" autoplay muted loop playsinline>
+        <source src="http://cfcmass.org/vide/video-bg.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
       <div id="video" style="max-height: 100%"></div>
       <div class="overlay"></div>
       <div class="container-fluid px-md-5">
@@ -380,8 +384,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">5 Pleasant St Methuen, MA 01844</span></li>
 	                <li><span class="icon icon-clock-o"></span><span class="text">Domingo : 10:00 am</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">(978) 208-0350</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@cfcma.org</span></a></li>
+	                <li><a href="tel:9782080350"><span class="icon icon-phone"></span><span class="text">(978) 208-0350</span></a></li>
+	                <li><a href="mailto:info@cfcmass.org"><span class="icon icon-envelope"></span><span class="text">info@cfcmass.org</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -415,7 +419,35 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <script src="js/jquery.vide.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$('.hero-wrap').vide({
+      // Adjust video size on window resize
+      function scaleVideo() {
+          const video = $('.hero-video');
+          const windowWidth = $(window).width();
+          const windowHeight = $(window).height();
+          
+          if (windowWidth / windowHeight > 16 / 9) {
+              video.css({
+                  'height': '100%',
+                  'width': 'auto'
+              });
+          } else {
+              video.css({
+                  'width': '100%',
+                  'height': 'auto'
+              });
+          }
+      }
+
+      // Initial scale
+      scaleVideo();
+
+      // Scale video on window resize
+      $(window).resize(function() {
+          scaleVideo();
+      });
+
+
+			/* $('.hero-wrap').vide({
 				mp4: 'vide/video-bg.mp4',
 				webm: 'vide/video-bg.webm',
 				poster: 'vide/poster.png'
@@ -430,7 +462,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				resizing: true, // Auto-resizing, read: https://github.com/VodkaBears/Vide#resizing
 				bgColor: 'transparent', // Allow custom background-color for Vide div,
 				className: '' // Add custom CSS class to Vide div
-			});
+			}); */
 			
 			$('#carousel-example').slick({
 				dots: false,

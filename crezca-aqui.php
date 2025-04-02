@@ -180,8 +180,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">5 Pleasant St Methuen, MA 01844</span></li>
 	                <li><span class="icon icon-clock-o"></span><span class="text">Domingo : 10:00 am</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">(978) 208-0350</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@cfcma.org</span></a></li>
+	                <li><a href="tel:9782080350"><span class="icon icon-phone"></span><span class="text">(978) 208-0350</span></a></li>
+	                <li><a href="mailto:info@cfcmass.org"><span class="icon icon-envelope"></span><span class="text">info@cfcmass.org</span></a></li>
 	              </ul>
 	            </div>
             </div>
